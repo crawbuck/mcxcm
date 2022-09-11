@@ -37,3 +37,19 @@ export default {
   }
 }
 </script>
+
+<style lang="css">
+  :root {
+    --color-black: #222;
+    --color-white: #efeee0;
+    --easing: cubic-bezier(.33, 1, .68, 1);
+    --timing: 400ms;
+    --transition: var(--timing) var(--easing);
+  }
+
+  body {
+    background: var(--color-black);
+    color: var(--color-white);
+    font-size: 16px;
+  }
+</style>
