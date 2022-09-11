@@ -38,7 +38,8 @@ export default {
         lname: "",
         phone: "",
         email: "",
-        party: ""
+        party: "",
+        attending: false,
       }
     }
   },
