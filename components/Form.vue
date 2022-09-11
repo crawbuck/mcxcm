@@ -78,21 +78,31 @@ export default {
         await fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: this.encodeFormData()
+          body: this.encodeFormData({
+            "form-name": this.formName,
+            ...this.data
+          })
         });
         return this.$emit("formSubmitted");
       } catch (err) {
         return alert(err);
       }
     },
-    encodeFormData() {
-      const keys = Object.keys(this.content.inputs);
+    encodeFormData(data) {
+      const keys = Object.keys(data);
 
       return keys.map((key) =>
-        encodeURIComponent(key) + "=" + encodeURIComponent(this.data[key])
+        encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       )
       .join("&");
     }
   },
 };
 </script>
+
+<style lang="css">
+  input,
+  p {
+    font-size: 16px;
+  }
+</style>
