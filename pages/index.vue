@@ -3,7 +3,7 @@
     <Header :content="header" />
     <Billboard :content="event" />
     <Form v-if="!submitted" :content="form" @formSubmitted="formSubmitted" />
-    <ThankYou v-if="submitted" :content="form" />
+    <ThankYou v-if="submitted" :content="form" :data="data" />
   </main>
 </template>
 
@@ -25,12 +25,14 @@ export default {
   },
   data() {
     return {
-      submitted: false
+      submitted: false,
+      data: {}
     }
   },
   methods: {
-    formSubmitted() {
+    formSubmitted(event) {
       this.submitted = !this.submitted;
+      this.data = event;
     }
   }
 }

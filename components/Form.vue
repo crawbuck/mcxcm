@@ -83,7 +83,7 @@ export default {
             ...this.data
           })
         });
-        return this.$emit("formSubmitted");
+        return this.$emit("formSubmitted", this.data);
       } catch (err) {
         return alert(err);
       }

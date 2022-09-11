@@ -11,6 +11,10 @@
       "phone": "Phone Number",
       "email": "Email Address(optional)",
       "party": "How many is your party?"
+    },
+    "success": {
+      "title": "Thank you",
+      "issues": "Your RSVP details(if incorrect or any changes necessary. Please contact <a href='tel:631-291-5773'>Debbie</a>)"
     }
   },
   "event": {
