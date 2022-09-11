@@ -1,15 +1,16 @@
 <template>
-  <form class="Form" name="rsvp" netlify @submit.prevent="handleSubmit">
+  <form class="Form" :name="formName" netlify @submit.prevent="handleSubmit">
+    <input type="hidden" name="form-name" :value="formName" />
     <fieldset>
       <legend class="Form__Header">
         {{ content.legend }}
       </legend>
-      <p v-for="(value, name) in content.inputs" :key="name" class="Form__Field">
-        <label :for="name" class="Form__FieldLabel">
+      <p v-for="(value, key) in content.inputs" :key="key" class="Form__Field">
+        <label :for="key" class="Form__FieldLabel">
           <span class="Form__FieldTitle">
             {{ value }}
           </span>
-          <input :id="name" v-model="data[name]" class="Form__FieldInput" :type="getType(name)" :name="name" />
+          <input :id="key" v-model="data[key]" class="Form__FieldInput" :type="getType(key)" :name="key" :required="getRequirement(key)" />
         </label>
       </p>
       <p class="Form__Field">
@@ -30,6 +31,7 @@ export default {
   },
   data() {
     return {
+      formName: "RSVP",
       data: {
         fname: "",
         lname: "",
@@ -67,12 +69,29 @@ export default {
 
       return type;
     },
-    handleSubmit() {
-      return fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(this.data).toString(),
-      });
+    getRequirement(context) {
+      const notEmail = context !== "email";
+      return notEmail;
+    },
+    async handleSubmit() {
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: this.encodeFormData()
+        });
+        return this.$emit("formSubmitted");
+      } catch (err) {
+        return alert(err);
+      }
+    },
+    encodeFormData() {
+      const keys = Object.keys(this.content.inputs);
+
+      return keys.map((key) =>
+        encodeURIComponent(key) + "=" + encodeURIComponent(this.data[key])
+      )
+      .join("&");
     }
   },
 };
