@@ -32,6 +32,7 @@ export default {
   data() {
     return {
       formName: "RSVP",
+      attending: false,
       data: {
         fname: "",
         lname: "",
@@ -46,6 +47,7 @@ export default {
       const isEmail = context === "email";
       const isPhone = context === "phone";
       const isNumber = context === "party";
+      const isAttendance = context === "attending";
       let type;
 
       switch (true) {
@@ -55,6 +57,10 @@ export default {
         }
         case isPhone: {
           type = "tel";
+          break;
+        }
+        case isAttendance: {
+          type = "checkbox";
           break;
         }
         case isNumber: {
@@ -70,10 +76,11 @@ export default {
       return type;
     },
     getRequirement(context) {
-      const notEmail = context !== "email";
-      return notEmail;
+      return context !== "email" || !this.attending;
     },
     async handleSubmit() {
+      if (!this.attending) this.data.party = 0;
+
       try {
         await fetch("/", {
           method: "POST",

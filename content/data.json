@@ -8,6 +8,7 @@
     "inputs": {
       "f_name": "First Name",
       "l_name": "Last Name",
+      "attending": "Are you able to join us?",
       "phone": "Phone Number",
       "email": "Email Address(optional)",
       "party": "How many is your party?"
