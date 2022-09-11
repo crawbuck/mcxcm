@@ -4,19 +4,48 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Chelsey & Michael&#39;s Engagement Party',
+    title: "Chelsey & Michael's Engagement Party",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Beginning at 12PM. We hope that you&#39;ll join us on the afternoon of November 27th to celebrate our engagement.' },
+      { hid: 'description', name: 'description', content: "Beginning at 12PM. We hope that you'll join us on the afternoon of November 27th to celebrate our engagement." },
       { name: 'format-detection', content: 'telephone=no' },
       // Open Graph
-      { hid: 'og-type', property: 'og:type', content: 'website' },
-      { hid: 'og-title', property: 'og:title', content: 'Chelsey & Michael&#39;s Engagement Party' },
-      { hid: 'og-desc', property: 'og:description', content: 'Beginning at 12PM. We hope that you&#39;ll join us on the afternoon of November 27th to celebrate our engagement.' },
-      { hid: 'og-image', property: 'og:image', content: '/test.jpeg' },
-      { hid: 'og-url', property: 'og:url', content: 'https://chelseyxmichael.wedding/' },
-      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: "Chelsey & Michael's Engagement Party"
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: "Chelsey & Michael's Engagement Party"
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Beginning at 12PM. We hope that you'll join us on the afternoon of November 27th to celebrate our engagement."
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/test.jpeg'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://chelseyxmichael.wedding/'
+      },
+      {
+        hid: 't-type',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
