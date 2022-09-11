@@ -1,0 +1,22 @@
+{
+  "header": {
+    "title": "Lorem ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "form": {
+    "legend": "Lorem ipsum dolor sit amet",
+    "inputs": {
+      "f_name": "First Name",
+      "l_name": "Last Name",
+      "phone": "Phone Number",
+      "email": "Email Address(optional)",
+      "party": "How many is your party?"
+    }
+  },
+  "event": {
+    "url": "",
+    "date": "",
+    "time": "",
+    "address": ""
+  }
+}
