@@ -32,7 +32,6 @@ export default {
   data() {
     return {
       formName: "RSVP",
-      attending: false,
       data: {
         fname: "",
         lname: "",
@@ -77,7 +76,12 @@ export default {
       return type;
     },
     async handleSubmit() {
-      if (!this.attending) this.data.party = 0;
+      if (!this.data.attending) {
+        this.data.attending = "No";
+        this.data.party = 0;
+      } else {
+        this.data.attending = "Yes";
+      }
 
       try {
         await fetch("/", {
