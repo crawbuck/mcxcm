@@ -14,8 +14,9 @@
       "party": "How many is your party?"
     },
     "success": {
-      "title": "Thank you",
-      "issues": "Your RSVP details(if incorrect or any changes necessary. Please contact <a href='tel:631-291-5773'>Debbie</a>)"
+      "thanks": "Thank you",
+      "cant": "We're sorry to see you can't make it.",
+      "issues": "If any changes to your RSVP are necessary. Please contact <a href='tel:631-291-5773'>Debbie</a>"
     }
   },
   "event": {

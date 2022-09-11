@@ -10,7 +10,7 @@
           <span class="Form__FieldTitle">
             {{ value }}
           </span>
-          <input :id="key" v-model="data[key]" class="Form__FieldInput" :type="getType(key)" :name="key" :required="getRequirement(key)" />
+          <input :id="key" v-model="data[key]" class="Form__FieldInput" :type="getType(key)" :name="key" />
         </label>
       </p>
       <p class="Form__Field">
@@ -75,9 +75,6 @@ export default {
       }
 
       return type;
-    },
-    getRequirement(context) {
-      return context !== "email" || !this.attending;
     },
     async handleSubmit() {
       if (!this.attending) this.data.party = 0;
