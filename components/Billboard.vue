@@ -1,5 +1,7 @@
 <template>
-  <span></span>
+  <div>
+    <Icon />
+  </div>
 </template>
 
 <script>
