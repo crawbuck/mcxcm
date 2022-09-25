@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'BigCaslon';
+  src: url('../fonts/BigCaslonMedium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/BigCaslonMedium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/BigCaslonMedium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/BigCaslonMedium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/BigCaslonMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/BigCaslonMedium.svg#svgBigCaslonMedium') format('svg'); /* Legacy iOS */
+}
+
+:root {
+  /* Palette */
+  --color-black: #2b2c2a;
+  --color-white: #fdfaf8;
+  --color-whiteRock: #efeee0;
+
+  /* Transition */
+  --easing: cubic-bezier(.33, 1, .68, 1);
+  --timing: 400ms;
+  --transition: var(--timing) var(--easing);
+
+  /* Type */
+  --font-serif: 'BigCaslon';
+
+  /* Breakpoint */
+  --screen-s: "(min-width: 768px)";
+  --screen-m: "(min-width: 1024px)";
+  --screen-l: "(min-width: 1200px)";
+  --screen-xl: "(min-width: 1600px)";
+}
+
+
+html {
+  background: var(--color-whiteRock);
+  color: var(--color-black);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+  -webkit-tap-highlight-color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden !important;
+  font-family: var(--font-serif);
+  min-width: 320px;
+}
+
+body {
+  min-height: 100%;
+  height: auto;
+  margin: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+figure,
+b {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.85;
+}
+
+img,
+svg {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  position: relative;
+}
+
+
+.Form__Field,
+.Form__FieldLabel {
+  position: relative;
+}
+
+.Form fieldset {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1.5rem;
+  overflow: hidden;
+  border: 0;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.Form__Field {
+  display: grid;
+  grid-column: span 6;
+}
+
+.Form__Field.Form__Field--Full {
+  grid-column: span 12;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.Form__FieldTitle:not(.Form__FieldTitle--Fixed) {
+  display: block;
+  width: 100%;
+}
+
+.Form__FieldTitle--Fixed {
+  width: calc(100% - 0.65em - 6px);
+  padding-left: 6px;
+  margin-top: -6px;
+}
+
+@media screen and (min-width: 768px) {
+  .Form__FieldTitle--Fixed {
+    margin-left: 0.75rem;
+    margin-top: 0;
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+.Form__FieldLabel[for="attending"],
+.Form__FieldLabel[for="not_attending"] {
+  width: calc(50% - 1rem);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.Form__FieldLabel[for="song"] {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .Form__FieldLabel[for="attending"],
+  .Form__FieldLabel[for="not_attending"] {
+    display: flex;
+    width: 50%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Form__FieldLabel[for="attending"],
+  .Form__FieldLabel[for="not_attending"] {
+    align-items: center;
+  }
+  .Form__FieldInput[name="not_attending"] {
+    margin-left: 0.75rem;
+  }
+}
+
+input:not([type="radio"]),
+textarea {
+  border: 1px solid var(--color-black);
+  background: var(--color-white);
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  color: var(--color-black);
+  outline: 1px solid transparent;
+  display: block;
+  width: calc(100% - 2rem - 2px);
+  transition: outline var(--transition);
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: var(--color-black);
+  color: var(--color-whiteRock);
+  transition: all var(--transition);
+}
+
+input[type="submit"]:hover {
+  background: var(--color-whiteRock);
+  color: var(--color-black);
+}
+
+textarea {
+  min-height: 150px;
+  white-space: normal;
+  text-align: start;
+  -moz-text-align-last: start; /* Firefox 12+ */
+  text-align-last: start;
+  vertical-align: top;
+  resize: none;
+}
+
+input:focus,
+input:hover {
+  outline: 1px solid var(--color-black);
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: var(--color-whiteRock);
+  margin: 0;
+  padding: 0;
+  color: var(--color-black);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--color-black);
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform var(--transition);
+  box-shadow: inset 1em 1em var(--color-black);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
