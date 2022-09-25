@@ -106,7 +106,13 @@ main {
   overflow: hidden;
   border: 0;
   margin: 0;
-  padding: 0.75rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .Form fieldset {
+    padding: 0.75rem;
+  }
 }
 
 .Form__Field {
@@ -228,6 +234,10 @@ input[type="radio"] {
   transform: translateY(-0.075em);
   display: grid;
   place-content: center;
+}
+
+input[type="radio"]:focus {
+  outline: none;
 }
 
 input[type="radio"]::before {
