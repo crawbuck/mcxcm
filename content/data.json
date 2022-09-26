@@ -3,12 +3,11 @@
     "subtitle": "Celebrating",
     "title": "Michael & Chelsey",
     "description": "You are <br/>invited to <br/>join us",
-    "date": "November <br/> Twenty Seventh <br/> 2022",
-    "purpose": "For A Night Of"
+    "date": "November <br/> Twenty Seventh <br/> 2022"
   },
   "form": {
     "title": "Will you be joining the band of thieves?",
-    "description": "Please RSVP below",
+    "description": "Please RSVP below by Novemeber 5th 2022",
     "inputs": {
       "f_name": "First Name",
       "l_name": "Last Name",
@@ -25,8 +24,7 @@
   },
   "event": {
     "url": "https://goo.gl/maps/X5taoBr7QtryVriy8",
-    "date": "",
-    "time": "From 12 PM til' 4 PM",
+    "time": "From 12 PM 'til 4 PM (or whenever)",
     "address": "35A Gerard Street, Huntington, NY 11743",
     "title": "For A Day Of",
     "description": "Food, Drink, and Story Telling",

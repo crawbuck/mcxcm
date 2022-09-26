@@ -29,7 +29,7 @@
         <label for="attending" class="Form__FieldLabel">
           <input id="attending" v-model="data['attending']" class="Form__FieldInput" type="radio" name="attending" value="yes" />
           <span class="Form__FieldTitle Form__FieldTitle--Fixed">
-            Yes! We're ready to eat, drink and celebrate!
+            Yes! We're ready to eat, drink, and celebrate!
           </span>
         </label>
         <label for="not_attending" class="Form__FieldLabel">
