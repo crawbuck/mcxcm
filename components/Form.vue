@@ -4,8 +4,7 @@
     <fieldset>
       <legend class="Form__Field Form__Field--Full">
         <span class="Form__Description">
-          <span class="Header__Title">
-            {{ content.title }}
+          <span class="Header__Title" v-text="content.title">
           </span>
           {{ content.description }}
         </span>
