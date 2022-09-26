@@ -2,12 +2,10 @@
   <form class="Form" :name="formName" netlify @submit.prevent="handleSubmit">
     <input type="hidden" name="form-name" :value="formName" />
     <fieldset>
-      <legend class="Form__Field Form__Field--Full">
+      <div class="Form__Field Form__Field--Full">
         <span class="Header__Title" v-text="content.title"></span>
-        <span class="Form__Description">
-          {{ content.description }}
-        </span>
-      </legend>
+        <span class="Form__Description" v-text="content.description"></span>
+      </div>
       <p class="Form__Field">
         <label for="f_name" class="Form__FieldLabel">
           <span class="Form__FieldTitle">
