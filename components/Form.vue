@@ -32,8 +32,8 @@
             Yes! We're ready to eat, drink and celebrate!
           </span>
         </label>
-        <label for="not_attending" class="Form__FieldLabel">
-          <input id="not_attending" v-model="data['attending']" class="Form__FieldInput" type="radio" name="not_attending" value="no" />
+        <label for="attending" class="Form__FieldLabel">
+          <input id="not_attending" v-model="data['attending']" class="Form__FieldInput" type="radio" name="attending" value="no" />
           <span class="Form__FieldTitle Form__FieldTitle--Fixed">
             No, but will toast to you from afar
           </span>
@@ -60,7 +60,7 @@
           <span class="Form__FieldTitle">
             Request a song? (Optional)
           </span>
-          <textarea id="song" v-model="data['song']" class="Form__FieldInput" name="story"></textarea>
+          <textarea id="song" v-model="data['song']" class="Form__FieldInput" name="song"></textarea>
         </label>
       </p>
       <p class="Form__Field Form__Field--Full">
