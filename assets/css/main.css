@@ -248,6 +248,7 @@ input[type="submit"] {
   transition: all var(--transition);
   font-family: var(--font-sans);
   letter-spacing: .125rem;
+  appearance: none;
 }
 
 input[type="submit"]:hover {
