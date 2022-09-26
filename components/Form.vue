@@ -3,9 +3,6 @@
     <input type="hidden" name="form-name" :value="formName" />
     <fieldset>
       <legend class="Form__Field Form__Field--Full Header__Title">
-        <span>
-          Suck your mum
-        </span>
         <span class="Form__Description">
           {{ content.description }}
         </span>
