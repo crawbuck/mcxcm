@@ -133,6 +133,7 @@ main {
   text-align: center;
   display: block;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .Form__Field,
