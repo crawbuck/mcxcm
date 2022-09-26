@@ -3,9 +3,8 @@
     <input type="hidden" name="form-name" :value="formName" />
     <fieldset>
       <legend class="Form__Field Form__Field--Full">
+        <span class="Header__Title" v-text="content.title"></span>
         <span class="Form__Description">
-          <span class="Header__Title" v-text="content.title">
-          </span>
           {{ content.description }}
         </span>
       </legend>
