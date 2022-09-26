@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     async handleSubmit() {
-      if (!this.data.attending) {
+      if (this.data.attending === "no") {
         this.data.attending = "No";
         this.data.party = 0;
       } else {
