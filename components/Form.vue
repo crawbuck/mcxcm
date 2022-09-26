@@ -2,8 +2,11 @@
   <form class="Form" :name="formName" netlify @submit.prevent="handleSubmit">
     <input type="hidden" name="form-name" :value="formName" />
     <fieldset>
-      <legend class="Form__Field Form__Field--Full">
+      <legend class="Form__Field Form__Field--Full Header__Title">
         {{ content.legend }}
+        <span class="Form__Description">
+          {{ content.description }}
+        </span>
       </legend>
       <p class="Form__Field">
         <label for="f_name" class="Form__FieldLabel">
@@ -85,7 +88,7 @@ export default {
         fname: "",
         lname: "",
         phone: "",
-        party: "",
+        party: "1",
         song: "",
         attending: false,
       }

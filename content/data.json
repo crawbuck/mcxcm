@@ -1,10 +1,14 @@
 {
   "header": {
-    "title": "Lorem ipsum dolor sit amet",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "subtitle": "Celebrating",
+    "title": "Michael & Chelsey",
+    "description": "You are <br/>invited to <br/>join us",
+    "date": "November <br/> Twenty Seventh <br/> 2022",
+    "purpose": "For A Night Of"
   },
   "form": {
-    "legend": "Lorem ipsum dolor sit amet",
+    "legend": "Will you be joining the band of thieves?",
+    "description": "Please RSVP below",
     "inputs": {
       "f_name": "First Name",
       "l_name": "Last Name",
@@ -20,9 +24,12 @@
     }
   },
   "event": {
-    "url": "",
+    "url": "https://goo.gl/maps/X5taoBr7QtryVriy8",
     "date": "",
-    "time": "",
-    "address": ""
+    "time": "From 12 PM til' 4 PM",
+    "address": "35A Gerard Street, Huntington, NY 11743",
+    "title": "For A Day Of",
+    "description": "Food, Drink, and Story Telling",
+    "location": "Restuarant Joanina"
   }
 }
