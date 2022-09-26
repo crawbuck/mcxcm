@@ -1,9 +1,12 @@
 <template>
   <main role="main">
-    <Header :content="header" />
-    <Billboard :content="event" />
-    <Form v-if="!submitted" :content="form" @formSubmitted="formSubmitted" />
-    <ThankYou v-if="submitted" :content="form" :data="data" />
+    <div>
+      <Header :content="header" />
+      <Billboard :content="event" />
+      <Form v-if="!submitted" :content="form" @formSubmitted="formSubmitted" />
+      <ThankYou v-if="submitted" :content="form" :data="data" />
+    </div>
+    <Footer />
   </main>
 </template>
 

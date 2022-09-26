@@ -1,13 +1,13 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <span>
-    <h1>
+  <section class="Thanks">
+    <h1 class="Thanks__Title">
       {{ title }}
     </h1>
-    <span v-if="data">
+    <span v-if="data" class="Thanks__Details">
       <span>
-        <h2 v-html="content.success.issues"></h2>
-        <h3 v-if="data.party > 0" v-text="`${data.f_name} ${data.l_name}`"></h3>
+        <p class="Thanks__DetailsTitle" v-html="content.success.issues"></p>
+        <p v-if="data.party > 0" v-text="`${data.f_name} ${data.l_name}`"></p>
         <p v-if="data.party > 0" v-text="`Party of ${data.party}`"></p>
         <p v-if="data.party > 0">
           {{ data.phone }}
@@ -17,7 +17,7 @@
         </p>
       </span>
     </span>
-  </span>
+  </section>
 
 </template>
 
