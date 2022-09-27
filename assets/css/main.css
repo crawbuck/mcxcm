@@ -280,6 +280,7 @@ input[type="submit"]:hover {
 textarea {
   min-height: 150px;
   white-space: normal;
+  font-size: 16px;
   text-align: start;
   -moz-text-align-last: start; /* Firefox 12+ */
   text-align-last: start;
