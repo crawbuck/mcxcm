@@ -8,7 +8,7 @@ const metaObj = () => {
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: "Chelsey & Michael's Engagement Party",
+      content: "Michael & Chelsey's Engagement Party",
     },
     { name: 'twitter:site', content: '@michaelcrawbuck' },
     {
@@ -19,7 +19,7 @@ const metaObj = () => {
     {
       hid: 'twitter:image',
       name: 'twitter:image',
-      content: './test.jpg',
+      content: './og_img.jpg',
     },
     {
       property: 'twitter:image:alt',
@@ -33,7 +33,7 @@ const metaObj = () => {
     {
       hid: 'og:title',
       property: 'og:title',
-      content: "Chelsey & Michael's Engagement Party",
+      content: "Michael & Chelsey's Engagement Party",
     },
 
     // Required canonical url
@@ -47,7 +47,7 @@ const metaObj = () => {
     {
       hid: 'og:image',
       property: 'og:image',
-      content: './test.jpg',
+      content: './og_img.jpg',
     },
 
     // Optional image width

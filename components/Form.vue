@@ -64,7 +64,7 @@
         </label>
       </p>
       <p class="Form__Field Form__Field--Full">
-        <input type="submit" name="submit" value="RSVP" />
+        <input type="submit" name="submit" value="Press to RSVP" />
       </p>
     </fieldset>
   </form>
