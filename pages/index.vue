@@ -1,5 +1,5 @@
 <template>
-  <main role="main">
+  <main role="main" class="App" :class="{ 'App--Loaded' : loaded }">
     <div>
       <Header :content="header" />
       <Billboard :content="event" />
@@ -28,9 +28,15 @@ export default {
   },
   data() {
     return {
+      loaded: false,
       submitted: false,
       data: {}
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      return (this.loaded = true);
+    }, 250);
   },
   methods: {
     formSubmitted(event) {

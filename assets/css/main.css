@@ -136,6 +136,16 @@ main > div {
   z-index: 1;
 }
 
+.App * {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity var(--transition);
+}
+
+.App--Loaded * {
+  opacity: 1;
+}
+
 .Form__Description {
   font-family: var(--font-sans-italic);
   font-size: 14px;
