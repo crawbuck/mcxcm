@@ -7,7 +7,7 @@
   },
   "form": {
     "title": "Will you be joining the band of thieves?",
-    "description": "Please RSVP below by Novemeber 5th 2022",
+    "description": "Please RSVP below by November 5th 2022",
     "inputs": {
       "f_name": "First Name",
       "l_name": "Last Name",
