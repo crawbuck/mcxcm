@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       loaded: false,
+      offset: 0,
       submitted: false,
       data: {}
     }

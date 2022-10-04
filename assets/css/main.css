@@ -52,6 +52,11 @@
   --screen-xl: "(min-width: 1600px)";
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   background: var(--color-whiteRock);
@@ -63,7 +68,6 @@ html {
   height: -webkit-fill-available;
   -webkit-tap-highlight-color: var(--color-black);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden !important;
   font-family: var(--font-serif);
   min-width: 320px;
 }
@@ -74,7 +78,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 h1,
@@ -129,11 +132,14 @@ main {
 }
 
 main > div {
+  min-height: calc(100vh - 500px);
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   z-index: 1;
+  overflow-x: hidden;
+  background: var(--color-whiteRock);
 }
 
 .App * {
@@ -143,7 +149,7 @@ main > div {
 }
 
 .App--Loaded * {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .Form__Description {
@@ -258,7 +264,7 @@ textarea {
   color: var(--color-black);
   outline: 1px solid transparent;
   display: block;
-  width: calc(100% - 2rem - 2px);
+  width: 100%;
   transition: outline var(--transition);
 }
 
@@ -476,19 +482,25 @@ input[type="radio"]:checked::before {
 }
 
 .Footer {
+  height: 500px;
   width: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
   background: var(--color-black);
   color: var(--color-whiteRock);
+  position: sticky;
+  bottom: 0;
+  opacity: 0;
+  transition-delay: 500ms;
 }
 
+
 .Footer h1 {
-  font-size: clamp(16px, 10vw, 80px);
+  font-size: clamp(16px, 20.5vw, 80px);
 }
 
 .Footer > div {
   height: 100%;
-  width: calc(100% - 4rem);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
