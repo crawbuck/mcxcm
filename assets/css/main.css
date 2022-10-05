@@ -133,7 +133,6 @@ main {
 
 main > div {
   position: relative;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   z-index: 1;
