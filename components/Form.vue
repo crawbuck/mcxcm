@@ -99,6 +99,10 @@ export default {
         this.data.party = 0;
       } else {
         this.data.attending = "Yes";
+        const containsCountry = this.data.phone.substring(0, 1) === "1";
+
+        if (containsCountry) this.data.phone = this.data.phone.substring(1);
+        this.data.phone = this.data.phone.replaceAll("-", "");
       }
 
       try {

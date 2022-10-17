@@ -10,7 +10,7 @@
         <p v-if="data.party > 0" v-text="`${data.f_name} ${data.l_name}`"></p>
         <p v-if="data.party > 0" v-text="`Party of ${data.party}`"></p>
         <p v-if="data.party > 0">
-          {{ data.phone }}
+          {{ number }}
         </p>
         <p v-if="data.email !== '' && data.party > 0">
           {{ data.email }}
@@ -41,6 +41,14 @@ export default {
       const partySize = parseInt(this.data.party);
       if (partySize > 0) return this.content.success.thanks;
       return this.content.success.cant;
+    },
+    number() {
+      const cleaned = (this.data.phone).replace(/\D/g, '');
+      const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+      if (match) {
+        return `${match[1]}-${match[2]}-${match[3]}`;
+      }
+      return null;
     }
   }
 };
