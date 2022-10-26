@@ -11,6 +11,8 @@
 </template>
 
 <script>
+const root = document.documentElement;
+
 export default {
   async asyncData({ $content }) {
     try {
@@ -55,8 +57,21 @@ export default {
         this.setDarkMode();
       }, 250);
     },
+    setLightMode() {
+      root.style.setProperty(
+        '--background',
+        getComputedStyle(root).getPropertyValue('--color-whiteRock')
+      );
+      root.style.setProperty(
+        '--foreground',
+        getComputedStyle(root).getPropertyValue('--color-black')
+      );
+      root.style.setProperty(
+        '--borders',
+        getComputedStyle(root).getPropertyValue('--color-borderDark')
+      );
+    },
     setDarkMode() {
-      const root = document.documentElement;
       root.style.setProperty(
         '--background',
         getComputedStyle(root).getPropertyValue('--color-black')
