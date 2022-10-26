@@ -1,5 +1,5 @@
 <template>
-  <main role="main" class="App" :class="{ 'App--Loaded' : loaded }">
+  <main role="main" class="App" :class="{ 'App--Loaded' : loaded }" :data-theme="theme">
     <div :style="`min-height: calc(100vh - ${offset}px)`">
       <Header :content="header" />
       <Billboard :content="event" />
@@ -30,6 +30,7 @@ export default {
     return {
       loaded: false,
       offset: 0,
+      theme: "light",
       submitted: false,
       data: {}
     }
@@ -50,6 +51,24 @@ export default {
     formSubmitted(event) {
       this.submitted = !this.submitted;
       this.data = event;
+      setTimeout(() => {
+        this.setDarkMode();
+      }, 250);
+    },
+    setDarkMode() {
+      const root = document.documentElement;
+      root.style.setProperty(
+        '--background',
+        getComputedStyle(root).getPropertyValue('--color-black')
+      );
+      root.style.setProperty(
+        '--foreground',
+        getComputedStyle(root).getPropertyValue('--color-whiteRock')
+      );
+      root.style.setProperty(
+        '--borders',
+        getComputedStyle(root).getPropertyValue('--color-borderLight')
+      );
     }
   }
 }

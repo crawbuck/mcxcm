@@ -31,9 +31,14 @@
 :root {
   /* Palette */
   --color-black: #2b2c2a;
-  --color-border: rgba(43, 44, 42, 0.2);
+  --color-borderDark: rgba(43, 44, 42, 0.2);
+  --color-borderLight: rgba(239, 238, 224, 0.2);
   --color-white: #fdfaf8;
   --color-whiteRock: #efeee0;
+
+  --foreground: var(--color-black);
+  --background: var(--color-whiteRock);
+  --borders: var(--color-borderDark);
 
   /* Transition */
   --easing: cubic-bezier(.33, 1, .68, 1);
@@ -56,17 +61,18 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: color var(--transition), background var(--transition);
 }
 
 html {
-  background: var(--color-whiteRock);
-  color: var(--color-black);
+  background: var(--background);
+  color: var(--foreground);
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
   scroll-behavior: smooth;
   height: -webkit-fill-available;
-  -webkit-tap-highlight-color: var(--color-black);
+  -webkit-tap-highlight-color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-serif);
   min-width: 320px;
@@ -137,7 +143,7 @@ main > div {
   padding: 2rem;
   z-index: 1;
   overflow-x: hidden;
-  background: var(--color-whiteRock);
+  background: var(--background);
 }
 
 .App * {
@@ -255,7 +261,7 @@ main > div {
 
 input:not([type="radio"]),
 textarea {
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--foreground);
   background: var(--color-white);
   border-radius: 5px;
   padding: 0.8rem 1rem;
@@ -268,8 +274,8 @@ textarea {
 
 input[type="submit"] {
   width: 100%;
-  background: var(--color-black);
-  color: var(--color-whiteRock);
+  background: var(--foreground);
+  color: var(--background);
   transition: all var(--transition);
   font-family: var(--font-sans);
   letter-spacing: .125rem;
@@ -277,8 +283,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: var(--color-whiteRock);
-  color: var(--color-black);
+  background: var(--background);
+  color: var(--foreground);
 }
 
 textarea {
@@ -296,18 +302,18 @@ input:focus,
 input:hover,
 textarea:hover,
 textarea:focus {
-  outline: 1px solid var(--color-black);
+  outline: 1px solid var(--foreground);
 }
 
 input[type="radio"] {
   appearance: none;
-  background-color: var(--color-whiteRock);
+  background-color: var(--background);
   margin: 0;
   padding: 0;
   color: var(--color-black);
   width: 1.15em;
   height: 1.15em;
-  border: 0.15em solid var(--color-black);
+  border: 0.15em solid var(--foreground);
   border-radius: 50%;
   transform: translateY(-0.075em);
   display: grid;
@@ -327,7 +333,7 @@ input[type="radio"]::before {
   border-radius: 50%;
   transform: scale(0);
   transition: transform var(--transition);
-  box-shadow: inset 1em 1em var(--color-black);
+  box-shadow: inset 1em 1em var(--foreground);
 }
 
 input[type="radio"]:checked::before {
@@ -385,7 +391,7 @@ input[type="radio"]:checked::before {
   align-items: center;
   margin: 0 0 2rem;
   padding: 1rem 0 2.5rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--borders);
 }
 
 .Header__Details > div {
@@ -400,12 +406,12 @@ input[type="radio"]:checked::before {
   top: 144%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--color-border);
+  background: var(--borders);
 }
 
 .Billboard {
   padding:  0 0 2rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--borders);
 }
 
 .Billboard__Title {
@@ -482,8 +488,8 @@ input[type="radio"]:checked::before {
 .Footer {
   width: 100%;
   padding: 2rem;
-  background: var(--color-black);
-  color: var(--color-whiteRock);
+  background: var(--foreground);
+  color: var(--background);
   position: sticky;
   bottom: 0;
   opacity: 0;
