@@ -11,8 +11,6 @@
 </template>
 
 <script>
-const root = document.documentElement;
-
 export default {
   async asyncData({ $content }) {
     try {
@@ -58,6 +56,7 @@ export default {
       }, 250);
     },
     setLightMode() {
+      const root = document.documentElement;
       root.style.setProperty(
         '--background',
         getComputedStyle(root).getPropertyValue('--color-whiteRock')
@@ -72,6 +71,7 @@ export default {
       );
     },
     setDarkMode() {
+      const root = document.documentElement;
       root.style.setProperty(
         '--background',
         getComputedStyle(root).getPropertyValue('--color-black')
