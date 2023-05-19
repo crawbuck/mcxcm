@@ -63,6 +63,7 @@
         </li>
       </ul>
       <input ref="guests" name="guests" value="" type="text" class="hidden" />
+      <input ref="party" name="party" value="" type="number" class="hidden" />
       <p v-show="data.attending === 'yes'" class="Form__Field Form__Field--Full">
         <label for="song" class="Form__FieldLabel">
           <span class="Form__FieldTitle">
@@ -110,7 +111,8 @@ export default {
         this.data.attending = "Yes";
         const containsCountry = this.data.phone.substring(0, 1) === "1";
         const hasGuests = this.guests.length > 0;
-        this.data.party = parseInt(this.data.party) + this.guests.length;
+        this.data.party = (parseInt(this.data.party) + this.guests.length);
+        this.$refs.party = this.data.party;
 
         if (hasGuests) {
           this.data.guests = this.guests.join(", ");
