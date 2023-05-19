@@ -112,6 +112,7 @@ export default {
     async handleSubmit() {
       if (this.data.attending === "no") {
         this.data.attending = "No";
+        this.data.party = 0;
       } else {
         this.data.attending = "Yes";
         const containsCountry = this.data.phone.substring(0, 1) === "1";
