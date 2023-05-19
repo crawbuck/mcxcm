@@ -62,7 +62,7 @@
           </label>
         </li>
       </ul>
-      <input ref="guests" value="" hidden type="text" class="hidden" />
+      <input ref="guests" value="" type="text" class="hidden" />
       <p v-show="data.attending === 'yes'" class="Form__Field Form__Field--Full">
         <label for="song" class="Form__FieldLabel">
           <span class="Form__FieldTitle">
@@ -111,8 +111,8 @@ export default {
         const hasGuests = this.guests.length > 0;
 
         if (hasGuests) {
-          this.data.guests = this.guests.join(",");
-          this.$refs.guests.value = this.data.guests;
+          this.data.guests = this.guests.join(", ");
+          this.$refs.guests.value = this.guests.join(", ");
         }
 
         if (containsCountry) this.data.phone = this.data.phone.substring(1);
