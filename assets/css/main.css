@@ -567,6 +567,17 @@ input[type="radio"]:checked::before {
   margin-bottom: 0;
 }
 
+.Registry ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Registry li:first-of-type {
+  margin-right: 6px;
+}
+
 .Location__Info,
 .Location .splide,
 .Registry__Image,
