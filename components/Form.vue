@@ -38,7 +38,7 @@
         <label for="not_attending" class="Form__FieldLabel">
           <input id="not_attending" v-model="data['attending']" class="Form__FieldInput" type="radio" name="not_attending" value="no" />
           <span class="Form__FieldTitle Form__FieldTitle--Fixed">
-            No, but will toast to you from afar
+            No, but will toast to you from afar.
           </span>
         </label>
       </p>

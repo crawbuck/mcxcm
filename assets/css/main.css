@@ -176,6 +176,7 @@ main > div {
 }
 
 .Form .Image {
+  margin-top: 0;
   width: 100%;
 }
 
@@ -553,7 +554,8 @@ input[type="radio"]:checked::before {
   align-items: center;
 }
 
-.Location {
+.Location,
+.Registry {
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
@@ -561,14 +563,21 @@ input[type="radio"]:checked::before {
   margin-bottom: 24px;
 }
 
+.Registry {
+  margin-bottom: 0;
+}
+
 .Location__Info,
-.Location .splide {
+.Location .splide,
+.Registry__Image,
+.Registry__Info {
   width: 100%;
   color: var(--foreground);
 }
 
 @media screen and (min-width: 768px) {
-  .Location {
+  .Location,
+  .Registry {
     flex-flow: row nowrap;
   }
   .Location__Info,
@@ -587,7 +596,8 @@ input[type="radio"]:checked::before {
   object-fit: cover;
 }
 
-.Location__InfoWrap {
+.Location__InfoWrap,
+.Registry__Info {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -596,7 +606,8 @@ input[type="radio"]:checked::before {
   padding: 16px 16px 24px;
 }
 
-.Location__InfoWrap a {
+.Location__InfoWrap a,
+.Registry__Info h3 {
   font-family: var(--font-serif);
   font-size: clamp(16px, 8vw, 60px);
   text-align: center;
@@ -604,7 +615,9 @@ input[type="radio"]:checked::before {
   color: var(--foreground);
 }
 
-.Location__InfoWrap > div {
+.Location__InfoWrap > div,
+.Registry__Info a,
+.Registry__Info p {
   font-family: var(--font-sans);
   text-align: center;
   font-size: 14px;
@@ -612,10 +625,14 @@ input[type="radio"]:checked::before {
   margin-bottom: 18px;
 }
 
+.Registry__Info a {
+  text-decoration: underline;
+}
+
 .Location__InfoWrap small {
   font-family: var(--font-sans);
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   width: 100%;
   display: block;
 }
@@ -629,6 +646,9 @@ input[type="radio"]:checked::before {
     max-width: 300px;
   }
   .Location__InfoWrap small {
+  }
+  .Registry__Info {
+    height: auto;
   }
 }
 
@@ -652,6 +672,7 @@ input[type="radio"]:checked::before {
   display: block;
   max-width: 500px;
   margin: 0 auto;
+  padding: 0 12px;
 }
 
 .Parking__Options {
@@ -680,7 +701,7 @@ input[type="radio"]:checked::before {
 
 .Parking__Option .Parking__Title {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .Parking__Option small,
@@ -709,6 +730,9 @@ input[type="radio"]:checked::before {
   .Parking__Option small,
   .Parking__Option address p {
     font-size: 10px;
+  }
+  .Parking p {
+    padding: 0;
   }
   .Parking__Option .Parking__BtnWrap {
     display: flex;

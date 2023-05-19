@@ -22,6 +22,20 @@
       "issues": "If any changes to your RSVP are necessary, please contact <a href='tel:631-291-5773'>Debbie</a>"
     }
   },
+  "registry": {
+    "title": "Gift Registry",
+    "description": "We are thrilled that you are coming to celebrate with us—and that's the best gift of all! But, if you would like to help us spruce up our first home together in New York, any of the following gifts from our registry would be gratefully received.",
+    "links": [
+      {
+        "title": "West Elm",
+        "url": "https://www.westelm.com/registry/qnwnj7vrqn/registry-list.html"
+      },
+      {
+        "title": "Amazon",
+        "url": "https://www.amazon.com/wedding/share/michael-chelsey-crawbuckmathews"
+      }
+    ]
+  },
   "location": {
     "images": [
       "barblondeau3.jpg",
@@ -32,7 +46,7 @@
     "title": "Bar Blondeau",
     "url": "https://www.barblondeau.com/",
     "description": "Cocktail style reception on the roof of The Wythe Hotel in Williamsburg. Cocktails, food, music, impeccable views.",
-    "subdescription": "Dress to impress",
+    "subdescription": "Attire: Dress to impress",
     "parking": {
       "title": "Parking",
       "description": "Street parking is quite abundant but, if parking at a garage is more your speed, below is a list of nearby garages.",
@@ -60,7 +74,7 @@
         "address": "25 Kent Ave, <br/>Brooklyn, NY 11249",
         "hours": "24 hours"
       },{
-        "title": "NYC Parking 22/34 North 6th Garage",
+        "title": "22/34 North 6th Garage",
         "url": "https://goo.gl/maps/sKQk8pP5V7cVX9Lo8",
         "telephone": "+1973-518-8090",
         "distance": "0.4 Miles // 8 minute walk time",
@@ -137,7 +151,7 @@
   },
   "event": {
     "url": "https://goo.gl/maps/bJkMZLosAaV3XBpH6",
-    "time": "From 5 PM 'til 9 PM (or whenever)",
+    "time": "From 5 PM 'til 9 PM",
     "address": "80 Wythe Ave 6th Floor, Brooklyn, NY 11249",
     "title": "For A Day Of",
     "description": "Food, Drink, and Matrimony",

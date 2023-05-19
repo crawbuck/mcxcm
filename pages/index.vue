@@ -6,6 +6,7 @@
       <Location :content="location"></Location>
       <Parking :content="location.parking" />
       <Parking :content="location.subway" />
+      <Registry :content="registry" />
       <Form v-if="!submitted" :content="form" @formSubmitted="formSubmitted" />
       <ThankYou v-if="submitted" :content="form" :data="data" />
     </div>
@@ -20,6 +21,7 @@ export default {
       const response = await $content('data').fetch();
       const {
         location,
+        registry,
         header,
         event,
         form,
@@ -27,6 +29,7 @@ export default {
 
       return {
         location,
+        registry,
         header,
         event,
         form
