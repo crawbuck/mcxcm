@@ -3,6 +3,9 @@
     <input type="hidden" name="form-name" :value="formName" />
     <fieldset>
       <div class="Form__Field Form__Field--Full">
+        <div class="Image">
+          <img src="M&C_NYC_ByLeandraCreativeCo.Photography-1685.jpg" />
+        </div>
         <span class="Header__Title" v-text="content.title"></span>
         <span class="Form__Description" v-text="content.description"></span>
       </div>
