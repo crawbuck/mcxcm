@@ -7,7 +7,7 @@
       {{ content.title }}
     </h1>
     <div class="Image">
-      <img src="ivebeendrankin.jpg" />
+      <img src="M&C_NYC_ByLeandraCreativeCo.Photography-2771.jpg" />
     </div>
     <div class="Header__Details">
       <div class="Header__Subtitle" v-html="content.description">
