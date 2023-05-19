@@ -52,16 +52,17 @@
           Click to Add a Guest
         </button>
       </p>
-      <ul v-show="data.attending === 'yes' && data.guests.length > 0" class="Form__Field Form__Field--Full">
-        <li v-for="(guest, index) in data.guests" :key="index">
+      <ul v-show="data.attending === 'yes' && guests.length > 0" class="Form__Field Form__Field--Full">
+        <li v-for="(guest, index) in guests" :key="index">
           <label :for="`attendee_${index}`" class="Form__FieldLabel">
             <span class="Form__FieldTitle">
               Guest #{{ index + 1 }}'s Full Name
             </span>
-            <input :id="`attendee_${index}`" v-model="data['guests'][index]" class="Form__FieldInput" type="text" :name="`attendee_${index}`" required />
+            <input :id="`attendee_${index}`" v-model="guests[index]" class="Form__FieldInput" type="text" :name="`attendee_${index}`" required />
           </label>
         </li>
       </ul>
+      <input ref="guests" value="" hidden type="text" class="hidden" />
       <p v-show="data.attending === 'yes'" class="Form__Field Form__Field--Full">
         <label for="song" class="Form__FieldLabel">
           <span class="Form__FieldTitle">
@@ -89,13 +90,14 @@ export default {
   data() {
     return {
       formName: "Wedding",
+      guests: [],
       data: {
         fname: "",
         lname: "",
         phone: "",
         party: "1",
         song: "",
-        guests: [],
+        guests: "",
         attending: false,
       }
     }
@@ -108,9 +110,12 @@ export default {
       } else {
         this.data.attending = "Yes";
         const containsCountry = this.data.phone.substring(0, 1) === "1";
-        const hasGuests = this.data.guests.length > 0;
+        const hasGuests = this.guests.length > 0;
 
-        if (hasGuests) this.data.guests = this.data.guests.join(",");
+        if (hasGuests) {
+          this.data.guests = this.guests.join(",");
+          this.$refs.guests.value = this.data.guests;
+        }
 
         if (containsCountry) this.data.phone = this.data.phone.substring(1);
         this.data.phone = this.data.phone.replaceAll("-", "");
@@ -139,7 +144,7 @@ export default {
       .join("&");
     },
     addGuest() {
-      return (this.data.guests.push(""));
+      return (this.guests.push(""));
     }
   },
 };
