@@ -35,7 +35,7 @@
     "subdescription": "Dress to impress",
     "parking": {
       "title": "Parking",
-      "description": "Street parking is quite abundant. If parking at a garage is more your speed, below is a list of nearby garages.",
+      "description": "Street parking is quite abundant but, if parking at a garage is more your speed, below is a list of nearby garages.",
       "cta": "Google Maps",
       "cta_phone": "Call Here",
       "garages": [{
