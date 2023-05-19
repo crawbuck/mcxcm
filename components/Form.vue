@@ -105,7 +105,7 @@ export default {
   },
   computed: {
     addText() {
-      return (this.guests.length > 1 ? `Add Another Guest` : `Click to Add Guest`);
+      return (this.guests.length > 0 ? `Add Another Guest` : `Click to Add Guest`);
     }
   },
   methods: {
