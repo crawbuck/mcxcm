@@ -49,7 +49,7 @@
       </p>
       <p v-show="data.attending === 'yes'" class="Form__Field Form__Field--Add">
         <button role="button" type="button" class="Form__FieldInput Form__FieldInput--Add" @click="addGuest">
-          Click to Add a Guest
+          {{ addText }}
         </button>
       </p>
       <ul v-show="data.attending === 'yes' && guests.length > 0" class="Form__Field Form__Field--Full">
@@ -101,6 +101,11 @@ export default {
         guests: "",
         attending: false,
       }
+    }
+  },
+  computed: {
+    addText() {
+      return (this.guests.length > 1 ? `Add Another Guest` : `Click to Add Guest`);
     }
   },
   methods: {
