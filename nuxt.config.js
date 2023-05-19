@@ -1,3 +1,5 @@
+const path = require('path');
+
 const metaObj = () => {
   return ([
     { charset: 'utf-8' },
@@ -87,11 +89,14 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    path.resolve(__dirname, 'node_modules/@splidejs/splide/dist/css/splide.min.css'),
     '@/assets/css/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '@/plugins/splide', mode: 'client' }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

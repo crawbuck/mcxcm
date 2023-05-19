@@ -3,6 +3,9 @@
     <div :style="`min-height: calc(100vh - ${offset}px)`">
       <Header :content="header" />
       <Billboard :content="event" />
+      <Location :content="location"></Location>
+      <Parking :content="location.parking" />
+      <Parking :content="location.subway" />
       <Form v-if="!submitted" :content="form" @formSubmitted="formSubmitted" />
       <ThankYou v-if="submitted" :content="form" :data="data" />
     </div>
@@ -15,9 +18,15 @@ export default {
   async asyncData({ $content }) {
     try {
       const response = await $content('data').fetch();
-      const { header, event, form } = response;
+      const {
+        location,
+        header,
+        event,
+        form,
+      } = response;
 
       return {
+        location,
         header,
         event,
         form

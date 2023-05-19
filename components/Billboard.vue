@@ -9,17 +9,6 @@
     <p class="Billboard__Description">
       {{ content.time }}
     </p>
-    <div class="Image">
-      <img src="whattup.jpg" />
-    </div>
-    <a href="https://www.restaurantjoanina.com/" target="_blank" class="Billboard__Location">
-      {{ content.location }}
-    </a>
-    <a :href="content.url" target="_blank" class="Billboard__Description">
-      <address>
-        {{ content.address }}
-      </address>
-    </a>
   </section>
 </template>
 
@@ -30,6 +19,11 @@ export default {
     content: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    garages() {
+      return (this.content.parking.garages);
     }
   }
 };
