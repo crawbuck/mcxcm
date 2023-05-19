@@ -88,7 +88,7 @@ export default {
   },
   data() {
     return {
-      formName: "RSVP",
+      formName: "Wedding",
       data: {
         fname: "",
         lname: "",
