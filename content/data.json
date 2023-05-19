@@ -78,7 +78,7 @@
         "url": "https://goo.gl/maps/NhcKY6XPT2qbTtAj9",
         "penn": true,
         "start": [
-          "https:/maps.gstatic.com/mapfiles/transit/iw2/svg/us-ny-mta/A.svg",
+          "https://maps.gstatic.com/mapfiles/transit/iw2/svg/us-ny-mta/A.svg",
           "https://maps.gstatic.com/mapfiles/transit/iw2/svg/us-ny-mta/C.svg",
           "https://maps.gstatic.com/mapfiles/transit/iw2/svg/us-ny-mta/E.svg"
         ],
