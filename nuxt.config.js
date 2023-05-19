@@ -4,24 +4,24 @@ const metaObj = () => {
   return ([
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'description', name: 'description', content: "Beginning at 12PM. We hope that you'll join us on the afternoon of November 27th to celebrate our engagement." },
+    { hid: 'description', name: 'description', content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marraige." },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'twitter:card', content: 'summary_large_image' },
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: "Michael & Chelsey's Engagement Party",
+      content: "Chelsey & Michael's Wedding Cocktail Receiption",
     },
     { name: 'twitter:site', content: '@michaelcrawbuck' },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
-      content: "Beginning at 12PM. We hope that you'll join us on the afternoon of November 27th to celebrate our engagement.",
+      content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marraige.",
     },
     {
       hid: 'twitter:image',
       name: 'twitter:image',
-      content: './og_img.jpg',
+      content: './barblondeau4.jpg',
     },
     {
       property: 'twitter:image:alt',
@@ -35,7 +35,7 @@ const metaObj = () => {
     {
       hid: 'og:title',
       property: 'og:title',
-      content: "Michael & Chelsey's Engagement Party",
+      content: "Chelsey & Michael's Wedding Cocktail Receiption",
     },
 
     // Required canonical url
@@ -49,7 +49,7 @@ const metaObj = () => {
     {
       hid: 'og:image',
       property: 'og:image',
-      content: './og_img.jpg',
+      content: './barblondeau4.jpg',
     },
 
     // Optional image width
@@ -68,7 +68,7 @@ const metaObj = () => {
     {
       hid: 'og:description',
       property: 'og:description',
-      content: "Beginning at 12PM. We hope that you'll join us on the afternoon of November 27th to celebrate our engagement.",
+      content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marraige.",
     },
   ])
 }
