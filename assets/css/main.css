@@ -175,6 +175,10 @@ main > div {
   margin-top: 1rem;
 }
 
+.Form .Image {
+  width: 100%;
+}
+
 .Form__Field,
 .Form__FieldLabel {
   position: relative;
