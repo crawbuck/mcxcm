@@ -4,19 +4,19 @@ const metaObj = () => {
   return ([
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'description', name: 'description', content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marraige." },
+    { hid: 'description', name: 'description', content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marriage." },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'twitter:card', content: 'summary_large_image' },
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: "Chelsey & Michael's Wedding Cocktail Receiption",
+      content: "Chelsey & Michael's Wedding Cocktail Reception",
     },
     { name: 'twitter:site', content: '@michaelcrawbuck' },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
-      content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marraige.",
+      content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marriage.",
     },
     {
       hid: 'twitter:image',
@@ -35,7 +35,7 @@ const metaObj = () => {
     {
       hid: 'og:title',
       property: 'og:title',
-      content: "Chelsey & Michael's Wedding Cocktail Receiption",
+      content: "Chelsey & Michael's Wedding Cocktail Reception",
     },
 
     // Required canonical url
@@ -68,7 +68,7 @@ const metaObj = () => {
     {
       hid: 'og:description',
       property: 'og:description',
-      content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marraige.",
+      content: "Beginning at 5PM. We hope that you'll join us on the afternoon of June 11th to celebrate our marriage.",
     },
   ])
 }
@@ -82,7 +82,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Chelsey & Michael's Engagement Party",
+    title: "Chelsey & Michael's Wedding Cocktail Reception",
     meta: metaObj(),
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
