@@ -574,8 +574,12 @@ input[type="radio"]:checked::before {
   align-items: center;
 }
 
-.Registry li:first-of-type {
+.Registry li {
   margin-right: 6px;
+}
+
+.Registry li:last-of-type {
+  margin-right: 0px;
 }
 
 .Location__Info,
