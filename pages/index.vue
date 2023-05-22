@@ -6,6 +6,7 @@
       <Location :content="location"></Location>
       <Parking :content="location.parking" />
       <Parking :content="location.subway" />
+      <Registry :content="registry" />
       <Form v-if="!submitted" :content="form" @formSubmitted="formSubmitted" />
       <ThankYou v-if="submitted" :content="form" :data="data" />
     </div>
